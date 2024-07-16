@@ -1,0 +1,42 @@
+# coding
+vscode
+	co-pilot
+	cpp plugin
+	python plugin
+firefox
+	make default browser
+	dark theme
+	Plugins:
+		AI Grammar Check & Paraphrase - Language tool
+		Firefox Translations
+		Privacy Badger
+		Dark Reader
+git
+
+# gaming
+steam
+	v-rising
+	palworld
+	deep rock galactic
+	risk of rain 2
+	maple story?
+discord
+
+# other
+update drivers
+update windows
+Hebrew for the keyboard
+windows app store
+	update
+	spotify
+	whatsapp 
+	icloud
+	crunchyroll 
+	netflix
+	Dark Skies by Tracy Hymas (theme)
+
+
+
+# music
+reaper - https://www.reaper.fm/download.php
+
