@@ -3,6 +3,7 @@ vscode
 	co-pilot
 	cpp plugin
 	python plugin
+	cascadia mono font
 firefox
 	make default browser
 	dark theme
