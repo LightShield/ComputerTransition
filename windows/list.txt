@@ -19,22 +19,23 @@ steam
 	palworld
 	deep rock galactic
 	risk of rain 2
-	maple story?
-discord
+	goat simulator 3
+
 
 # other
 update drivers
 update windows
 Hebrew for the keyboard
 windows app store
-	update
+	updates
 	spotify
 	whatsapp 
 	icloud
 	crunchyroll 
 	netflix
 	Dark Skies by Tracy Hymas (theme)
-
+	Ubuntu on windows
+	discord
 
 
 # music
