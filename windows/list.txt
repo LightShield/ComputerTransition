@@ -1,4 +1,6 @@
 # coding
+cursor (IDE) and Windsurf(IDE)
+	use bolt.new, V0 by versel, Lovable? looks cool
 vscode
 	co-pilot
 	cpp plugin
