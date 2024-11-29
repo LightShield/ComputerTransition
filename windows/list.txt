@@ -44,3 +44,6 @@ windows app store
 # music
 reaper - https://www.reaper.fm/download.php
 	waves plugin https://www.waves.com/downloads/central
+Microphone
+DI
+Guitar
