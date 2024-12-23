@@ -1,0 +1,7 @@
+[user]
+        email = lightshild@gmail.com
+        name = Or Magen
+[alias]
+        st = status
+        alias = config --get-regexp alias
+
