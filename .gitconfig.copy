@@ -4,4 +4,4 @@
 [alias]
         st = status
         alias = config --get-regexp alias
-
+	alias-edit = config --global --edit
