@@ -1,1 +1,2 @@
 wezterm (terminal)
+curser ide?

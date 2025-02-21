@@ -37,7 +37,7 @@ update_git_aliases() {
     git config --global alias.lola "log --graph --decorate --pretty=oneline --abbrev-commit --all"
     git config --global alias.conflicts "diff --name-only --diff-filter=U"
     git config --global alias.subup "submodule update --init --recursive"
-
+    git config --global alias.l log --format='%C(yellow)%h%C(reset) %C(blue)%cd%C(reset) %C(green)<%an>%C(reset) %C(red)%d%C(reset) %s'
     echo "Git aliases updated successfully."
 }
 
