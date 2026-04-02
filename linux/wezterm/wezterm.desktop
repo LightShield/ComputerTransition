@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WezTerm
+Comment=A GPU-accelerated cross-platform terminal emulator and multiplexer
+Exec=wezterm
+Icon=org.wezfurlong.wezterm
+Type=Application
+Categories=System;TerminalEmulator;Utility;
+Terminal=false
+Keywords=terminal;emulator;wezterm;
