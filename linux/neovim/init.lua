@@ -44,8 +44,14 @@ vim.g.mapleader = " "
 -- Save file with Space + s
 vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save file" })
 
--- Open terminal in a new tab with Space + t
-vim.keymap.set("n", "<leader>t", ":tab terminal<CR>i", { desc = "Terminal in new tab" })
+-- TERMINAL MANAGEMENT
+-- Open terminal in a bottom pane (split)
+vim.keymap.set("n", "<leader>t", ":botright split | terminal<CR>i", { desc = "Terminal in bottom pane" })
+-- Open terminal in a new tab
+vim.keymap.set("n", "<leader>T", ":tab terminal<CR>i", { desc = "Terminal in new tab" })
+
+-- Easy exit from terminal mode to normal mode
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- IDE Navigation Shortcuts
 -- Use Alt + h/j/k/l to move between split windows
