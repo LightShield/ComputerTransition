@@ -1,16 +1,22 @@
 #!/bin/bash
 
-# --- Auto SSH Agent ---
-# This script ensures an ssh-agent is running and the GitHub key is loaded.
+# --- Universal SSH Agent ---
+# Ensures an ssh-agent is running and loads available identities.
 
-SSH_KEY="$HOME/.ssh/fedora_laptop_github"
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+fi
 
-if [ -f "$SSH_KEY" ]; then
-    # Check if agent is already running
-    if [ -z "$SSH_AUTH_SOCK" ]; then
-        eval "$(ssh-agent -s)" > /dev/null
-    fi
-
-    # Add the key if it's not already in the agent
-    ssh-add -l | grep -q "$SSH_KEY" || ssh-add "$SSH_KEY" 2>/dev/null
+# Find and add private keys if not already loaded
+# We look for files in ~/.ssh that don't have public extensions or common metadata names
+if [ -d "$HOME/.ssh" ]; then
+    for key in "$HOME"/.ssh/*; do
+        # Basic check: is it a file, not a public key, and not a system file?
+        if [ -f "$key" ] && [[ ! "$key" == *.pub ]] && [[ ! "$key" == *known_hosts* ]] && [[ ! "$key" == *config ]] && [[ ! "$key" == *authorized_keys* ]]; then
+            # Check if the key is already in the agent to avoid re-prompting/noise
+            if ! ssh-add -l | grep -q "$(basename "$key")"; then
+                ssh-add "$key" 2>/dev/null
+            fi
+        fi
+    done
 fi
