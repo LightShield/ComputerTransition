@@ -29,6 +29,9 @@ vim.opt.termguicolors = true
 -- Highlight the line the cursor is currently on
 vim.opt.cursorline = true
 
+-- Sync clipboard between OS and Neovim
+vim.opt.clipboard = 'unnamedplus'
+
 -------------------------------------------------------------------------------
 -- 2. KEYMAPS (SHORTCUTS)
 -------------------------------------------------------------------------------
