@@ -38,8 +38,11 @@ vim.opt.cursorline = true
 -- Set <Space> as your 'Leader' key (the prefix for many custom commands)
 vim.g.mapleader = " "
 
--- Example: Space + w to save the current file
-vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
+-- Save file with Space + s
+vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save file" })
+
+-- Open terminal in a new tab with Space + t
+vim.keymap.set("n", "<leader>t", ":tab terminal<CR>i", { desc = "Terminal in new tab" })
 
 -- IDE Navigation Shortcuts
 -- Use Alt + h/j/k/l to move between split windows
@@ -88,6 +91,23 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {}, -- This tells the plugin to use default settings
+  },
+
+  -- KEYBINDING HELP: Press Space and wait, or Space + ?
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.opt.timeout = true
+      vim.opt.timeoutlen = 300
+    end,
+    config = function()
+      local wk = require("which-key")
+      wk.setup()
+      vim.keymap.set("n", "<leader>?", function()
+        wk.show({ global = false })
+      end, { desc = "Buffer Local Keymaps (Help)" })
+    end,
   },
 
   -- FILE EXPLORER: Press <leader>e to toggle
